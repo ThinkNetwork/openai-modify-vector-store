@@ -1,9 +1,8 @@
-
 [
   {
     "kind": "column",
-    "name": "OpenAI (Assistants)",
-    "description": "Create, modify and run OpenAI Assistants.",
+    "name": "Modify OpenAI Vector Store",
+    "description": "Modify a specific vector store in OpenAI's API by updating its name, metadata, and expiration policy.",
     "author": "Gavin Horne <gavin@thinknetwork.com.au>",
     "params": [
       {
@@ -12,18 +11,23 @@
         "type": "string"
       },
       {
-        "name": "endpoint",
-        "displayName": "API Endpoint (Required)",
+        "name": "vector_store_id",
+        "displayName": "Vector Store ID (Required)",
         "type": "string"
       },
       {
-        "name": "body",
-        "displayName": "Body (JSON Schema Required)",
+        "name": "name",
+        "displayName": "Vector Store Name (Optional)",
         "type": "string"
       },
       {
-        "name": "json",
-        "displayName": "JSON Schema (Output)",
+        "name": "metadata",
+        "displayName": "Metadata (JSON format, Optional)",
+        "type": "string"
+      },
+      {
+        "name": "expires_after",
+        "displayName": "Expires After (JSON format, Optional)",
         "type": "string"
       }
     ],
